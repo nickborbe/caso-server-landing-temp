@@ -33,6 +33,8 @@ router.get('/test/', (req, res, next) => {
 
 
 router.post('/contact-us', (req, res, next) => {
+  
+  
 
     let name = req.body.name
     let email = req.body.email
@@ -43,24 +45,25 @@ router.post('/contact-us', (req, res, next) => {
 
     let RECIPIENT;
     if (contactWhoEmail === "fanMail") {
-        RECIPIENT = 'connect@anamariapolo.tv'
+        // RECIPIENT = 'connect@anamariapolo.tv'
+        RECIPIENT = '@nickborbe@gmail.com'
         subject = `Contact Us Message From - ${email} - FanMail`
     }
     if (contactWhoEmail === "LaDoctoraResponde") {
         RECIPIENT = 'ladoctorapoloresponde@anamariapolo.tv'
-        subject = `Contact Us Message From - ${email} - La Doctora Responde`
+        subject = `Contact Us Message From ${email} re: La Doctora Responde`
     }
     if (contactWhoEmail === "prMail") {
         RECIPIENT = 'pr@anamariapolo.tv'
-        subject = `Contact Us Message From - ${email} - PR Mail`
+        subject = `Contact Us Message From ${email} re: PR Mail`
     }
     if (contactWhoEmail === "partnerships") {
       RECIPIENT = 'media@anamariapolo.tv'
-      subject = `Contact Us Message From - ${email} - Partnerships`
+      subject = `Contact Us Message From ${email} re: Partnerships`
   }
     if (contactWhoEmail === "help") {
       RECIPIENT = 'help@anamariapolo.tv'
-      subject = `Contact Us Message From - ${email} - Contest`
+      subject = `Contact Us Message From ${email} re:help`
   }
 
     let mail = {
@@ -69,6 +72,7 @@ router.post('/contact-us', (req, res, next) => {
         subject: subject,
         text: message
       }
+
 
       transporter.sendMail(mail, (err, data) => {
         if (err) {
