@@ -1,0 +1,16 @@
+{
+  "main.css": "/caso-client/static/css/main.ee027078.chunk.css",
+  "main.js": "/caso-client/static/js/main.d052b76d.chunk.js",
+  "main.js.map": "/caso-client/static/js/main.d052b76d.chunk.js.map",
+  "runtime~main.js": "/caso-client/static/js/runtime~main.e0f4ba76.js",
+  "runtime~main.js.map": "/caso-client/static/js/runtime~main.e0f4ba76.js.map",
+  "static/js/2.3426cfb2.chunk.js": "/caso-client/static/js/2.3426cfb2.chunk.js",
+  "static/js/2.3426cfb2.chunk.js.map": "/caso-client/static/js/2.3426cfb2.chunk.js.map",
+  "index.html": "/caso-client/index.html",
+  "precache-manifest.becee31314fddc3644b35dab715e72b6.js": "/caso-client/precache-manifest.becee31314fddc3644b35dab715e72b6.js",
+  "service-worker.js": "/caso-client/service-worker.js",
+  "static/css/main.ee027078.chunk.css.map": "/caso-client/static/css/main.ee027078.chunk.css.map",
+  "static/media/index.css": "/caso-client/static/media/NoirPro-Regular.d969db6a.otf",
+  "static/media/all.css": "/caso-client/static/media/fa-solid-900.ff8d9f8a.ttf",
+  "static/media/logo.svg": "/caso-client/static/media/logo.5d5d9eef.svg"
+}
