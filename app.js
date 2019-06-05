@@ -76,6 +76,10 @@ app.use('/api', authroutes);
 const mailRoutes = require('./routes/mailchimproutes')
 app.use('/api', mailRoutes);
 
+app.use((req, res, next) => {
+  res.sendFile(__dirname + "/public/index.html");
+});
+
 
 
 module.exports = app;
