@@ -4,12 +4,12 @@ const nodemailer = require("nodemailer");
 const creds = require('../config/config');
 
 let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
+    service: "gmail",
     port: 587,
     secure: false,
     auth: {
-        user: creds.USER,
-        pass: creds.PASS
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
 });
 
@@ -43,17 +43,25 @@ router.post('/contact-us', (req, res, next) => {
 
     let RECIPIENT;
     if (contactWhoEmail === "fanMail") {
-        RECIPIENT = 'whateverEmailIs@gmail.com'
+        RECIPIENT = 'connect@anamariapolo.tv'
         subject = `Contact Us Message From - ${email} - FanMail`
     }
-    if (contactWhoEmail === "questionAnswer") {
-        RECIPIENT = 'whateverEmailIs@gmail.com'
-        subject = `Contact Us Message From - ${email} - Question/Answer`
+    if (contactWhoEmail === "doctoraResponde") {
+        RECIPIENT = 'ladoctorapoloresponde@anamariapolo.tv'
+        subject = `Contact Us Message From - ${email} - La Doctora Responde`
     }
-    if (contactWhoEmail === "contest") {
-        RECIPIENT = 'whateverEmailIs@gmail.com'
-        subject = `Contact Us Message From - ${email} - Contest`
+    if (contactWhoEmail === "prMail") {
+        RECIPIENT = 'pr@anamariapolo.tv'
+        subject = `Contact Us Message From - ${email} - PR Mail`
     }
+    if (contactWhoEmail === "partnerships") {
+      RECIPIENT = 'media@anamariapolo.tv'
+      subject = `Contact Us Message From - ${email} - Partnerships`
+  }
+    if (contactWhoEmail === "help") {
+      RECIPIENT = 'help@anamariapolo.tv'
+      subject = `Contact Us Message From - ${email} - Contest`
+  }
 
     let mail = {
         from: name,
