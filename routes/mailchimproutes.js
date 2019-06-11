@@ -46,7 +46,7 @@ router.post('/contact-us', (req, res, next) => {
         RECIPIENT = 'connect@anamariapolo.tv'
         subject = `Contact Us Message From - ${email} - FanMail`
     }
-    if (contactWhoEmail === "doctoraResponde") {
+    if (contactWhoEmail === "LaDoctoraResponde") {
         RECIPIENT = 'ladoctorapoloresponde@anamariapolo.tv'
         subject = `Contact Us Message From - ${email} - La Doctora Responde`
     }
